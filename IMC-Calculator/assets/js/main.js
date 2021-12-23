@@ -13,15 +13,17 @@ function calcula_IMC(altura, peso){
     show_result.value = IMC.toFixed(2) //FORMATANDO O RESULTADO (APENAS DUAS CASAS DECIMAIS APÓS A VIRGULA(PONTO))
     if(IMC <= 18.5){
        peso_info.innerHTML = 'NÃO ESTÁ NO PESO IDEAL'
-    }else if((IMC >= 18.6) && (IMC <= 24.9)){
+    }
+    if((IMC >= 18.6) && (IMC <= 24.9)){
         peso_info.innerHTML = 'PESO IDEAL'
-    }else if((IMC >= 25) && (IMC <= 29.9)){
+    }if((IMC >= 25) && (IMC <= 29.9)){
         peso_info.innerHTML = 'LEVEMENTE ACIMA DO PESO'
-    }else if((IMC >= 30) && (IMC <= 34.9)){
+    }if((IMC >= 30) && (IMC <= 34.9)){
         peso_info.innerHTML = 'OBESIDADE GRAU I'
-    }else if((IMC >= 35) && (IMC <= 39.9)){
+    }if((IMC >= 35) && (IMC <= 39.9)){
         peso_info.innerHTML = 'OBESIDADE GRAU II (SEVERA)'
-    }else{
+    }
+    if(IMC >= 40){
         peso_info.innerHTML = 'OBESIDADE GRAU III (MÓRBIDA)'
     }
 }
@@ -29,6 +31,7 @@ function mode_change(){
   const mode = document.getElementById('mode')
   if(mode.checked){
     const body = document.getElementsByTagName('body')[0].style.background='#151515'
+
   }else{
     const body = document.getElementsByTagName('body')[0].style.background='#fff'
   }
